@@ -1,4 +1,4 @@
-# FMEA excel macros library
+# FMEA MS Excel macros library
 
 - This library contains MS Excel(VBA) macros essential for speeding up the FMEA table creation process. 
 - These macros are uploaded in the form of .bas file but it is possible to open them as .txt file and copy the content into MS Excel *Developer module*. 
@@ -31,6 +31,15 @@
     3. *Transpose_new*
     4. *ParameterLookUp*
     5. *StrFind*
+   - The content of these functions is in principle the same for each macro, the only functions different between the macros are *ParameterLookUp* and *StrFind* 
+
+### The working principle of each function:
+- Functions *Split*, *Transpose_new* are used for formatting the working sheet, these functions are essential for the proper function of a macro and they **SHOULD NOT BE EDITED IN ANY WAY**
+- Function *CopyCellValueToNewSheet* copies cell values from active sheet into the new sheet to create FMEA table
+   - this functions uses subfunction *DoesSheetExists* to check whether the destination sheet already exists, if it does not the function will create one
+- Function *ParameterLookUp* copies component failure rate and part description into the working sheet based on the parameters in the B and C column from the source sheet(Capacitors/Inductors/etc.)
+- Function *StrFind* calculates the failure rate based on the component type and mode and outputs the result into the destination sheets and copies it into clipboard
+
 
 
 
