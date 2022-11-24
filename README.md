@@ -13,13 +13,13 @@
    8. Now you've created a module where you can copy the macro
 
 ### Macros included in this repository:
-- [x] capacitors.bas
-- [x] diodes.bas
-- [x] inductors.bas
-- [x] microcircuits.bas
-- [x] microcircuits_specials.bas
-- [x] resitors.bas
-- [x] transistors.bas
+- [x] Capacitors.bas
+- [x] Diodes.bas
+- [x] Inductors.bas
+- [x] Microcircuits.bas
+- [x] Microcircuits_specials.bas
+- [x] Resitors.bas
+- [x] Transistors.bas
 
 ### The basic structure of the macros: 
 - Each macro consists of multiple sub functions with the same working principle
