@@ -105,7 +105,7 @@ Set ws = Worksheets("Table_fmea")
 Range("D:D").AdvancedFilter Action:=xlFilterCopy, CopyToRange:=Range("L:L"), Unique:=True
 End Sub
 
-Sub FindSeverity()
+Sub FindSeverity() 'funkcia na hladanie severity, jednoduchy for loop a if statement
 Dim i As Long
 Dim j As Long
 Dim k As Long
@@ -164,7 +164,7 @@ Next
         
 End Sub
 
-Sub CalculateFailRate()
+Sub CalculateFailRate() 'funkcia ktora pocita finalny percentualny failure rate
 
 Dim ws As Worksheet
 Dim i As Long
@@ -190,7 +190,7 @@ For i = 1 To Range("P1000").End(xlUp).Row - 1
     Range("Q" & i + 1).Value = (FailRatePerHour * 100) / FailRateHundred
 Next
 End Sub
-Sub DetMethodCalc()
+Sub DetMethodCalc() ' funkcia na pocitanie deteringu, vyuziva for loop, case a podla vzorcov vyrata vysledok
 
 Dim i As Long
 Dim FailureRateSum As Double
@@ -259,7 +259,7 @@ Next
 
 End Sub
 
-Sub SortFR()
+Sub SortFR() 'zoradi FailureRate od najmensej hodnoty
 Dim lastrow As Long
 lastrow = Cells(Rows.Count, 16).End(xlUp).Row
 Range("L2:Q" & lastrow).Sort key1:=Range("P2:P" & lastrow), _
